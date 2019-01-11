@@ -14,25 +14,25 @@ class Config
      * Database host
      * @var string
      */
-    const DB_HOST = 'localhost';
+    const DB_HOST = '';
 
     /**
      * Database name
      * @var string
      */
-    const DB_NAME = 'mvc';
+    const DB_NAME = '';
 
     /**
      * Database user
      * @var string
      */
-    const DB_USER = 'taslim';
+    const DB_USER = '';
 
     /**
      * Database password
      * @var string
      */
-    const DB_PASSWORD = 'Anjum@8840';
+    const DB_PASSWORD = '';
 
     /**
      * Show or hide error messages on screen
