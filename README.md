@@ -1,4 +1,4 @@
-# PHPTriangle-core
+# PHPTriangle
 ## PHP Framework
 
 **PHPTriangle** is a easy to learn PHP MVC framework.
