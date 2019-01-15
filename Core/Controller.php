@@ -2,10 +2,14 @@
 
 namespace Core;
 
+use \Core\Addon\Auth;
+use \Core\Addon\Flash;
+use \App\Config\Config;
+
 /**
  * Base controller
  *
- * PHP version 5.4
+ * PHP version 7.0
  */
 abstract class Controller
 {
@@ -69,5 +73,37 @@ abstract class Controller
      */
     protected function after()
     {
+    }
+
+    /**
+     * Redirect to a different page
+     *
+     * @param string $url  The relative URL
+     *
+     * @return void
+     */
+    public function redirect($url)
+    {
+        header('Location: '.Config::HTTP.'://' . $_SERVER['HTTP_HOST'] . $url, true, 303);
+        exit;
+    }
+
+    /**
+     * Require the user to be logged in before giving access to the requested page.
+     * Remember the requested page for later, then redirect to the login page.
+     *
+     * @return void
+     */
+    public function requireLogin()
+    {
+        if (! Auth::getUser()) {
+
+            //Flash::addMessage('Please login to access that page');
+            Flash::addMessage('Please login to access that page', Flash::INFO);
+
+            Auth::rememberRequestedPage();
+
+            $this->redirect('/login');
+        }
     }
 }

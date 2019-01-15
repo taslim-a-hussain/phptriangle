@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Config;
 
 /**
  * Application configuration
  *
- * PHP version 5.4
+ * PHP version 7.0
  */
 class Config
 {
@@ -38,5 +38,22 @@ class Config
      * Show or hide error messages on screen
      * @var boolean
      */
-    const SHOW_ERRORS = false;
+    const SHOW_ERRORS = true;
+
+    /**
+     * Secret key for hashing
+     * @var boolean
+     */
+    const SECRET_KEY = '';
+
+
+    const MAIL_DEBUG    = 0;
+    const MAIL_HOST     = '';
+    const MAIL_USERNAME = '';
+    const MAIL_PASSWORD = '';
+    const MAIL_SECURE   = ''; 
+    const MAIL_PORT     = 587;
+
+
+    const HTTP = 'http';
 }

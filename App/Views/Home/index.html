@@ -1,16 +1,10 @@
-{% extends "base.html" %}
+{% extends 'TEMPLATE/base.html' %}
 
 {% block title %}Home{% endblock %}
 
 {% block body %}
 
-    <h1>Welcome</h1>
-    <p>Hello from a Twig template, {{ name }}!</p>
+    <h1>Welcome to PHPTriangle</h1>
 
-    <ul>
-        {% for colour in colours %}
-            <li>{{ colour }}</li>
-        {% endfor %}
-    </ul>
 
 {% endblock %}

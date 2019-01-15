@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/native/css/styles.css" />
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/posts/index">Posts</a>
-    </nav>
+
+
 
     {% block body %}
+    {% endblock %}
+
+    <script src="/third-party/js/jquery-3.3.1.min.js"></script>
+
+    {% block footer %}
     {% endblock %}
 </body>
 </html>
